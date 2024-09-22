@@ -4,7 +4,7 @@ export default function TermsOfService() {
             <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
             <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
             <p className="mb-4">
-                Please read these Terms of Service ("Terms", "Terms of Service") carefully before using our website.
+                Please read these Terms of Service {`("Terms", "Terms of Service")`} carefully before using our website.
             </p>
             <h2 className="text-2xl font-semibold mt-6 mb-4">1. Agreement to Terms</h2>
             <p className="mb-4">
