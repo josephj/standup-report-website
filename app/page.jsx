@@ -28,13 +28,22 @@ export default function Page() {
                 <ContextAlert />
                 <h1 className="mb-0">Stand-up Report Generator</h1>
                 <p className="text-lg">Streamline your daily stand-ups with AI-powered reports.</p>
-                <Link
-                    href="https://chromewebstore.google.com/detail/stand-up-report-generator/iiokonekdbnkbpbdoppdenommagiaheh"
-                    className="btn btn-lg btn-primary sm:btn-wide rounded-full"
-                    target="_blank"
-                >
-                    Install Now
-                </Link>
+                <div className="flex flex-col items-center gap-3">
+                    <Link
+                        href="https://chromewebstore.google.com/detail/stand-up-report-generator/iiokonekdbnkbpbdoppdenommagiaheh"
+                        className="btn btn-lg btn-primary sm:btn-wide rounded-full"
+                        target="_blank"
+                    >
+                        Install Now
+                    </Link>
+                    <Link
+                        href="https://drive.google.com/file/d/1S7k4B1A0_PBnlBq-i2A25PhTR1ZOvAQm/view?usp=drive_link"
+                        className="text-sm text-yellow-300 no-underline hover:underline"
+                        target="_blank"
+                    >
+                        Download latest version (v0.0.4)
+                    </Link>
+                </div>
             </section>
             <section className="flex flex-col gap-4">
                 <Markdown content={contextExplainer} />
