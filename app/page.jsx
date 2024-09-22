@@ -1,28 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card } from 'components/card';
 import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
-
-const cards = [
-    //{ text: 'Hello', linkText: 'someLink', href: '/' }
-];
-
-const contextExplainer = `
-The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
-([docs](https://docs.netlify.com/configure-builds/environment-variables/#build-metadata)):
-`;
+import extensionScreenshot from 'public/images/extension-screenshot.png';
+const contextExplainer = `The Stand-up Report Generator is a Chrome extension that streamlines your daily stand-up process. It automatically fetches data from Jira tickets, GitHub PRs, 
+and Google Calendar events.  Using this information, it can generate a comprehensive stand-up report, saving you time and effort every morning.`;
 
 const preDynamicContentExplainer = `
-The card content below is fetched by the client-side from \`/quotes/random\` (see file \`app/quotes/random/route.js\`) with a different quote shown on each page load:
+Here's a sample of what your stand-up report might look like:
 `;
 
 const postDynamicContentExplainer = `
-On Netlify, Next.js Route Handlers are automatically deployed as [Serverless Functions](https://docs.netlify.com/functions/overview/).
-Alternatively, you can add Serverless Functions to any site regardless of framework, with acccess to the [full context data](https://docs.netlify.com/functions/api/).
+The Stand-up Report Generator leverages the power of OpenAI's API to create concise and informative reports based on the data it collects. This ensures that your stand-up contributions are always relevant and well-structured.
 
-And as always with dynamic content, beware of layout shifts & flicker! (here, we aren't...)
+Install the extension today and revolutionise your daily stand-up routine!
 `;
 
 const ctx = getNetlifyContext();
@@ -30,29 +24,24 @@ const ctx = getNetlifyContext();
 export default function Page() {
     return (
         <main className="flex flex-col gap-8 sm:gap-16">
-            <section className="flex flex-col items-start gap-3 sm:gap-4">
+            <section className="flex flex-col items-center gap-3 sm:gap-4 justify-center">
                 <ContextAlert />
-                <h1 className="mb-0">Netlify Platform Starter - Next.js</h1>
-                <p className="text-lg">Get started with Next.js and Netlify in seconds.</p>
+                <h1 className="mb-0">Stand-up Report Generator</h1>
+                <p className="text-lg">Streamline your daily stand-ups with AI-powered reports.</p>
                 <Link
-                    href="https://docs.netlify.com/frameworks/next-js/overview/"
-                    className="btn btn-lg btn-primary sm:btn-wide"
+                    href="https://chromewebstore.google.com/detail/stand-up-report-generator/iiokonekdbnkbpbdoppdenommagiaheh"
+                    className="btn btn-lg btn-primary sm:btn-wide rounded-full"
+                    target="_blank"
                 >
-                    Read the Docs
+                    Install Now
                 </Link>
             </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
             <section className="flex flex-col gap-4">
+                <Markdown content={contextExplainer} />
                 <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
+                <Image src={extensionScreenshot} alt="extension screenshot" className="rounded-lg" />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
-            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
         </main>
     );
 }
