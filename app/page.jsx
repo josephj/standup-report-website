@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from 'components/card';
-import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
@@ -37,11 +36,11 @@ export default function Page() {
                         Install Now
                     </Link>
                     <Link
-                        href="https://drive.google.com/file/d/1S7k4B1A0_PBnlBq-i2A25PhTR1ZOvAQm/view?usp=drive_link"
+                        href="https://drive.usercontent.google.com/u/0/uc?id=1T5JQLKVNEQRCY92UMpDqU9FrZ6MzPsDn&export=download"
                         className="text-sm text-yellow-300 no-underline hover:underline"
                         target="_blank"
                     >
-                        Download latest version (v0.0.4)
+                        Download latest version (v0.0.5)
                     </Link>
                 </div>
             </section>
