@@ -36,11 +36,11 @@ export default function Page() {
                         Install Now
                     </Link>
                     <Link
-                        href="https://drive.usercontent.google.com/u/0/uc?id=1T5JQLKVNEQRCY92UMpDqU9FrZ6MzPsDn&export=download"
+                        href="https://drive.usercontent.google.com/u/0/uc?id=1TmfMNguAsrDD3i0dVkCIAK7PA6_mBeka&export=download"
                         className="text-sm text-yellow-300 no-underline hover:underline"
                         target="_blank"
                     >
-                        Download latest version (v0.0.5)
+                        Download latest version (v0.0.6)
                     </Link>
                 </div>
             </section>
