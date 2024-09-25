@@ -47,7 +47,13 @@ export default function Page() {
             <section className="flex flex-col gap-4">
                 <Markdown content={contextExplainer} />
                 <Markdown content={preDynamicContentExplainer} />
-                <Image src={extensionScreenshot} alt="extension screenshot" className="rounded-lg" />
+                <Image
+                    src={extensionScreenshot}
+                    width="800px"
+                    height="594.5px"
+                    alt="extension screenshot"
+                    className="rounded-lg"
+                />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
         </main>
