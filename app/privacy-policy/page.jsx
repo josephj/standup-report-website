@@ -22,6 +22,13 @@ export default function PrivacyPolicy() {
                 We implement appropriate security measures to protect your personal information from unauthorized access
                 or disclosure.
             </p>
+            <h2 className="text-2xl font-semibold mt-6 mb-4">Google Workspace APIs</h2>
+            <p className="mb-4">
+                We want to explicitly state that any data obtained through Google Workspace APIs is not used to develop,
+                improve, or train generalized AI and/or ML models. We only use this data for the specific purposes of
+                providing and improving our direct services to you, in accordance with Google{`'`}s API Services User
+                Data Policy.
+            </p>
             <h2 className="text-2xl font-semibold mt-6 mb-4">Changes to This Privacy Policy</h2>
             <p className="mb-4">
                 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
